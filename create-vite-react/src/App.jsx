@@ -1,35 +1,35 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Products from './compenents/Products';
 
 function App() {
-  const [count, setCount] = useState(0)
+ const products=[
+  {
+    name:"Surf Excel",
+    date:"2024-04-13",
+    amount:150
+
+  },
+  {
+    name:"Tide",
+    date:"2024-03-15",
+    amount:150
+  },
+  {
+    name:"Aerial",
+    date:"2024-03-20",
+    amount:150
+  },
+  {
+    name:"Nirma",
+    date:"2024-02-18",
+    amount:150
+  } 
+ ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  <Products  products={products} />
     </>
-  )
+  );
 }
-
-export default App
+export default App;
